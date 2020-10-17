@@ -393,7 +393,7 @@ a:hover {
         grid-template-rows: 1fr 1fr 1fr; 
      }
 }
-@media screen and (min-width: 600px) {
+@media screen and (max-width: 600px) {
      .works-container, .contact-container{
         height:400vh;
     }
@@ -421,7 +421,7 @@ a:hover {
     }
 }
 
-@media screen and (min-width: 426px) {
+@media screen and (max-width: 426px) {
     #logo {
         display: none;
     }
@@ -448,7 +448,7 @@ a:hover {
     }
 }
 
-@media screen and (min-width: 376px) {
+@media screen and (max-width: 376px) {
     li {
         font-size: 14px;
         margin: 0 5.5px;
@@ -459,7 +459,7 @@ a:hover {
     }
 }
 
-@media screen and (min-width: 322px) {
+@media screen and (max-width: 322px) {
     li {
         font-size: 14px;
         margin: 0 4.5px;
