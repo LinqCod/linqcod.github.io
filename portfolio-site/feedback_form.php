@@ -1,19 +1,20 @@
 <?php
 
 #Receive user input
-$email_address = $_POST['email_address'];
-$feedback = $_POST['feedback'];
+$email = $_POST['email'];
+$fio = $_POST['fio'];
+$message = $_POST['message'];
 
 #Filter user input
 function filter_email_header($form_field) {  
 return preg_replace('/[nr|!/<>^$%*&]+/','',$form_field);
 }
 
-$email_address  = filter_email_header($email_address);
+$email  = filter_email_header($email);
 
 #Send email
-$headers = "From: $email_addressn";
-$sent = mail('danny12123@yandex.ru', 'Feedback Form Submission', $feedback, $headers);
+$headers = "From: $fio, $email";
+$sent = mail('danny12123@yandex.ru', 'Feedback Form Submission', $message, $headers);
 
 #Thank user or notify them of a problem
 if ($sent) {
