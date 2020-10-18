@@ -57,10 +57,10 @@ $(document).ready(function(){
         $('button img').animate({
             opacity: 1,
             marginTop: 25,
-        }, 500, "linear", )
+        }, 900, "linear", )
         $("button img").animate({
             opacity:0,
-        },500,"linear",function(){
+        },900,"linear",function(){
             loop();
         })
         $("button img").css("marginTop", 0);
@@ -87,7 +87,7 @@ $(document).ready(function(){
                 $(this).find('strong').text(String(stepValue.toFixed(2)).substr(2)+"%");
             });
         };
-        Circle('.round');
         
+    Circle('.round');  
 });
 });

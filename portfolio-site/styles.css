@@ -60,7 +60,7 @@
 
 .works-container {
     height: 140vh;
-    display: grid;
+    display: none;
     grid-template-rows: 1fr 1fr;
 }
 
@@ -252,7 +252,7 @@ h2 {
     display: grid;
     justify-content: center;
     align-content: center;
-    padding-top: 5px;
+    padding-top: 10px;
     outline-style: none;
 }
 
@@ -344,8 +344,20 @@ a {
 a:hover {
     color: red;
 }
-
-@media screen and (min-width: 900px){
+@media screen and (max-width: 1025px){
+    #skills{
+       grid-template-columns: 1fr 1fr; 
+       grid-template-rows: 1fr 1fr; 
+    }
+    .services-container {
+        height:140vh;
+    }
+    .form-container{
+        height: 120vh;
+    }
+    
+}
+@media screen and (max-width: 900px){
     .wrap-row{
        grid-template-columns: 1fr 1fr; 
        grid-template-rows: 1fr 1fr; 
@@ -366,32 +378,6 @@ a:hover {
        grid-template-columns: 1fr 1fr; 
        grid-template-rows: 1fr 1fr 1fr; 
     }
-}
-@media screen and (min-width: 600px) {
-    .lower-header ul{
-        margin-left: 40px;
-    }
-
-    .wrap-row{
-        grid-template-columns: 1fr 1fr; 
-        grid-template-rows: 1fr 1fr; 
-     }
-     #skills{
-        grid-template-columns: 1fr 1fr; 
-        grid-template-rows: 1fr 1fr; 
-     }
-     .services-container, .works-container {
-         height:300vh;
-     }
-     
-     .form-container, .contact-container {
-         height: 200vh;
-     }
- 
-     #works{
-        grid-template-columns: 1fr 1fr; 
-        grid-template-rows: 1fr 1fr 1fr; 
-     }
 }
 @media screen and (max-width: 600px) {
      .works-container, .contact-container{
@@ -439,12 +425,24 @@ a:hover {
         text-align: center;
     }
 
-    .contact-container, .form-container, .services-container {
-        height: 350vh;
+    .contact-container{
+        height: 300vh;
     }
-
+    .form-container{
+        height: 300vh;
+    }
+    .services-container{
+        height: 300vh;
+    }
     .works-container {
-        height: 500vh;
+        height: 400vh;
+    }
+    li {
+        font-size: 14px;
+        margin: 0 5.5px;
+    }
+    ul{
+        margin: 0 auto;
     }
 }
 
@@ -453,6 +451,9 @@ a:hover {
         font-size: 14px;
         margin: 0 5.5px;
     }
+    ul{
+        margin: 0 auto;
+    }
 
     .upper-header {
         grid-template-rows: 1fr 3fr 1fr;
@@ -460,6 +461,9 @@ a:hover {
 }
 
 @media screen and (max-width: 322px) {
+    ul{
+        margin: 0 auto;
+    }
     li {
         font-size: 14px;
         margin: 0 4.5px;
